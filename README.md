@@ -2,6 +2,11 @@
 
 Anero is a production-grade proof-of-stake blockchain built on Ethereum's execution layer (Geth) and consensus layer (Lighthouse). The network features 65,000+ active validators securing the chain and producing blocks.
 
+## Contributers/Developers
+
+AneroDev - Lead Developer & Creator of Anero
+Aurora - Development Manager
+
 ## Features
 
 - **Proof-of-Stake consensus** with 32 ANERO validator deposits

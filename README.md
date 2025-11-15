@@ -12,7 +12,7 @@ Aurora - Development Manager
 - **Proof-of-Stake consensus** with 32 ANERO validator deposits
 - **High throughput** execution layer using Geth
 - **Lighthouse consensus** with beacon chain architecture
-- **Production tested** with thousands of validators
+- **Production tested** with thousands of test validators
 - **Full EVM compatibility** - deploy any Ethereum dapp
 - **Cross-node redundancy** - run multiple nodes for reliability
 
@@ -30,8 +30,8 @@ Aurora - Development Manager
 
 ```bash
 # Clone repository
-git clone https://github.com/your-org/anero
-cd anero
+git clone https://github.com/anero-project/AneroMainnet
+cd AneroMainnet
 
 # Run setup
 bash setup.sh
@@ -40,7 +40,7 @@ bash setup.sh
 # - Node1 execution client
 # - Node2 execution client  
 # - Beacon node data directory
-# - JWT secret for client authentication
+# - JWT secret for client authentication (User must generate before running)
 ```
 
 ### Running the Network
@@ -88,10 +88,10 @@ bash start-validators.sh
 2. Click network selector → Add Network
 3. Fill in:
    - **Network Name:** Anero
-   - **RPC URL:** `http://localhost:8545`
+   - **RPC URL:** `https://node.getanero.org`
    - **Chain ID:** `1889`
    - **Currency Symbol:** `ANERO`
-   - **Block Explorer URL:** (optional)
+   - **Block Explorer URL:** explorer.getanero.org (optional) - not yet released
 
 4. Click Save
 
@@ -119,11 +119,11 @@ curl -s http://localhost:5052/eth/v1/beacon/states/head/validators | jq '.data |
 To stake and run as a validator:
 
 1. Create validator keys (already initialized)
-2. Deposit 32 ANERO to validator deposit contract
+2. Deposit 32 ANERO to validator deposit contract - not live yet blockchain is syncing - will take 8-10 days until validator deposit contract is live
 3. Validator automatically activates after 1 epoch
 4. Begin earning rewards
 
-Current validator participation: **65,000+ validators**
+Current validator participation: **2 validators**
 
 ## JSON-RPC Methods
 
@@ -239,8 +239,165 @@ npx hardhat test --network anero
 
 ## License
 
-MIT
+ANERO BLOCKCHAIN LICENSE
 
+Version 1.0
+
+DEFINITIONS
+
+"Software" means the Anero blockchain software, including source code, binaries, 
+documentation, and configuration files distributed under this license.
+
+"You" or "Your" means an individual or entity exercising rights under this License.
+
+"Licensor" means the entity offering the Software under this License.
+
+1. GRANT OF RIGHTS
+
+Subject to the terms and conditions of this License, Licensor grants You a 
+worldwide, non-exclusive, royalty-free, perpetual license to:
+
+(a) Use the Software for any purpose, including commercial purposes
+(b) Reproduce and distribute copies of the Software
+(c) Create derivative works based on the Software
+(d) Modify and improve the Software
+(e) Run validator nodes and participate in the Anero network
+(f) Deploy smart contracts on the Anero blockchain
+
+2. CONDITIONS
+
+You may exercise the rights granted in Section 1 provided that You:
+
+(a) Retain all copyright, patent, trademark, and attribution notices in all copies
+    of the Software
+(b) Include a copy of this License with any distribution
+(c) Clearly mark any modifications You make to the Software
+(d) Provide a copy of this License to recipients of the Software
+
+3. VALIDATOR OPERATION
+
+If You operate validator nodes on the Anero network:
+
+(a) You accept full responsibility for validator key management and security
+(b) You maintain backups of validator keys and configuration
+(c) You maintain network connectivity and uptime to the best of your ability
+(d) You comply with all applicable laws and regulations in Your jurisdiction
+(e) You understand that validator slashing penalties may apply for protocol violations
+
+4. NETWORK PARTICIPATION
+
+By participating in the Anero network, You:
+
+(a) Accept the current network parameters and consensus rules
+(b) Acknowledge that network upgrades may change protocol behavior
+(c) Accept full responsibility for Your ANERO tokens and transactions
+(d) Understand that blockchain transactions are permanent and irreversible
+
+5. DISCLAIMER OF WARRANTIES
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+THE SOFTWARE MAY CONTAIN BUGS, SECURITY VULNERABILITIES, OR OTHER DEFECTS. USE AT
+YOUR OWN RISK.
+
+LICENSOR IS NOT RESPONSIBLE FOR:
+- Loss of ANERO tokens or other assets
+- Validator slashing or penalties
+- Network forks, disruptions, or upgrades
+- Smart contract failures or exploits
+- Any indirect, incidental, or consequential damages
+
+6. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY DAMAGES ARISING OUT OF OR RELATED TO 
+THIS SOFTWARE, INCLUDING BUT NOT LIMITED TO:
+- Loss of funds or cryptocurrency
+- Loss of data
+- Loss of profits or revenue
+- Business interruption
+- Personal injury
+
+EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+7. MODIFICATIONS AND DERIVATIVES
+
+You may:
+- Modify the Software for Your own use
+- Create derivative works
+- Distribute modified versions
+
+Provided that:
+- You clearly indicate what You have changed
+- You retain all copyright and license notices
+- You distribute derivatives under this same License
+
+8. NO OBLIGATION
+
+Licensor has no obligation to:
+- Provide support or maintenance
+- Fix bugs or security issues
+- Maintain network consensus
+- Provide technical assistance
+
+9. TERMINATION
+
+This License is perpetual and cannot be revoked. However, if You violate the terms
+of this License, Your right to use the Software immediately terminates.
+
+10. GOVERNING LAW
+
+This License is governed by the laws of the jurisdiction where Licensor is located,
+without regard to conflicts of law principles.
+
+11. INTELLECTUAL PROPERTY
+
+(a) You acknowledge that Licensor retains all intellectual property rights in the
+    original Software
+(b) You grant Licensor a license to use any modifications You publicly share
+(c) Nothing in this License grants rights to Licensor's trademarks or branding
+
+12. NETWORK GOVERNANCE
+
+This License does not grant You any governance rights over:
+- Network parameters
+- Consensus rule changes
+- Protocol upgrades
+- Treasury or development funds
+
+Network governance is determined by the Anero community through consensus mechanisms.
+
+13. COMPLIANCE
+
+You agree to comply with all applicable laws and regulations, including but not 
+limited to:
+- Anti-money laundering (AML) regulations
+- Know your customer (KYC) requirements
+- Securities and commodities laws
+- Tax obligations
+- Export controls
+
+14. ENTIRE AGREEMENT
+
+This License constitutes the entire agreement between You and Licensor regarding 
+the Software and supersedes all prior agreements and understandings.
+
+15. SEVERABILITY
+
+If any provision of this License is found to be invalid or unenforceable, that 
+provision shall be severed and the remaining provisions shall continue in effect.
+
+---
+
+ACCEPTANCE
+
+By downloading, installing, or using the Anero Software, You accept all terms and 
+conditions of this License.
+
+Questions? See LICENSE.md or contact the Anero community.
+
+ANERO BLOCKCHAIN TEAM
 ---
 
 **Anero - The future of decentralized consensus**

@@ -1,0 +1,78 @@
+# Blockchain Data & States
+node1/
+node2/
+geth-data/
+lighthouse-data/
+lighthouse_config/
+
+# Logs (Large & Sensitive)
+*.log
+geth.log
+beacon.log
+validator.log
+node1.log
+node2.log
+wget-log*
+wget-log.1
+
+# Sensitive Private Keys & Passwords
+password.txt
+validator_passwords.txt
+jwt.hex
+*.key
+*.keystore
+keystore-*.json
+*-m_12381_3600_*.json
+
+# Validator Keys & Deposit Data
+validator-keys/
+validator-deposit-data.json
+deposit_data-*.json
+ethstaker-deposit-cli-main/
+
+# ALL Python Scripts (Internal development - DO NOT COMMIT)
+*.py
+
+# Config & Deployment Artifacts
+config/
+deposit_contract_bytecode.txt
+deposit_contract_abi.json
+update-chain-id.sh
+deploy_contract_signed.py
+deploy_contract_simple.py
+deploy_anero_deposit_contract.py
+submit_deposits_simple.py
+submit_anero_deposits.py
+extract_priv.py
+
+main
+
+# Build & Dependencies
+lighthouse/
+*.whl
+*.tar.gz
+build/
+dist/
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.iml
+
+# Temporary
+tmp/
+temp/
+*.tmp
+.cache/
+
+# Never commit
+.env
+.env.local
+secrets/
+main
+ethstaker-deposit-cli*

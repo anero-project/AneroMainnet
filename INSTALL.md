@@ -56,7 +56,7 @@ source $HOME/.cargo/env
 mkdir -p ~/blockchain && cd ~/blockchain
 
 # Clone Anero
-git clone https://github.com/your-org/anero
+git clone https://github.comanero-project/AneroMainnet
 cd anero
 
 # Make scripts executable
